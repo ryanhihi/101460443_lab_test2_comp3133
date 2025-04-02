@@ -1,8 +1,11 @@
 #Step to build the docker container
 # docker build -t 101460443-lab-test2-comp3133 .
 
+#Run the container only
+#docker run -d -p 8080:80 studentid-lab-test2-comp3133
 
-# Use official Node.js image to build the Angular app
+
+
 FROM node:18 as build
 
 WORKDIR /app
