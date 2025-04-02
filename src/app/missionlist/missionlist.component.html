@@ -1,8 +1,15 @@
+
 <h2>Lab Test 2 -Comp3133- Ryan Tran</h2>
+
+<!--Filter add on top by year-->
+<app-missionfilter (filteredyear)="filterByYear($event)"></app-missionfilter>
+
+<!--Mission List display-->
 
 <div class="mission-list">
     <h2>SpaceX Missions</h2>
-    <div *ngFor="let mission of missions" class="mission-card">
+    <div *ngIf="filteredMissions.length > 0; else noMissions">
+    <div *ngFor="let mission of filteredMissions" class="mission-card">
       <img [src]="mission.links.mission_patch_small" alt="{{ mission.mission_name }}" />
       <h3>{{ mission.mission_name }} ({{ mission.launch_year }})</h3>
       <p><strong>Flight Number:</strong> {{ mission.flight_number }}</p>
@@ -15,7 +22,12 @@
       </div>
     </div>
   </div>
-  
+
+</div>
+  <!--No mission found -->
+  <ng-template #noMissions>
+    <p class="no-results"> No space launch on year {{ selectedYear }}.</p>
+  </ng-template>
 
 <footer>
     <h1>Ryan Tran</h1>
