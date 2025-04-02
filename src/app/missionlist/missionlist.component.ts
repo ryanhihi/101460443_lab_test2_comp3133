@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SpacexService, Mission } from '../spacex.service';
 import { RouterModule, Router } from '@angular/router';
+//Import Service and Mission
+import { Mission } from '../model/mission';
+import { SpacexService } from '../services/spacex.service';
 //Add filter
 import { MissionfilterComponent } from '../missionfilter/missionfilter.component';
 
