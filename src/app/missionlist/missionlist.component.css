@@ -1,0 +1,25 @@
+.mission-list {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .mission-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 400px;
+    background-color: #f9f9f9;
+  }
+  
+  .mission-card img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: blue;
+  }
+  
